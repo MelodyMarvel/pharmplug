@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:pharmplug/onboarding/splash.dart';
+import 'package:pharmplug/onboarding_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
      
-      home: const Splash(),
+      home: const OnboardingScreen(),
     );
   }
 }
