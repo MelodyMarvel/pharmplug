@@ -2,8 +2,26 @@
 
 import 'package:flutter/material.dart';
 
-class UserScreen extends StatelessWidget {
+class UserScreen extends StatefulWidget {
   const UserScreen({super.key});
+
+  @override
+  State<UserScreen> createState() => _UserScreenState();
+}
+
+class _UserScreenState extends State<UserScreen> {
+  void _showPopUpBox() {
+    showDialog(
+      context: context,
+      barrierDismissible: true, // Allows clicking outside to dismiss the dialog
+      builder: (BuildContext context) {
+        return Dialog(
+          backgroundColor: Colors.transparent, // Makes the backdrop semi-transparent
+          child: _popUpBox(),
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -92,31 +110,35 @@ class UserScreen extends StatelessWidget {
 
   Widget _confirmButton() {
     return Center(
-      child: Container(
-        height: 60,
-        width: 350,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: Color(0xFF06B1CF),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'OK',
-              style: TextStyle(
-                fontSize: 30,
-                color: Colors.white,
-                fontWeight: FontWeight.w700,
+      child: GestureDetector(
+        onTap: () {_showPopUpBox();
+        },
+        child: Container(
+          height: 60,
+          width: 350,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: Color(0xFF06B1CF),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'OK',
+                style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
-            ),
-            const SizedBox(width: 20),
-            Icon(
-              Icons.check,
-              color: Colors.white,
-              size: 30,
-            ),
-          ],
+              const SizedBox(width: 20),
+              Icon(
+                Icons.check,
+                color: Colors.white,
+                size: 30,
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -154,6 +176,42 @@ class UserScreen extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+
+  Widget _popUpBox(){
+    return Container(
+      height: 180,
+      width: 220,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        color: Colors.white,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            height: 20,
+            width: 20,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),
+            color: Color(0xFF8CD50A)),
+          ),
+          SizedBox(width: 20,),
+          Container(
+            height: 24,
+            width: 24,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),
+            color: Color(0xFF8CD50A)),
+          ),
+          SizedBox(width: 20,),
+          Container(
+            height:28,
+            width: 28,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),
+            color: Color(0xFF8CD50A)),
+          )
+        ],
+      ),
     );
   }
 }
