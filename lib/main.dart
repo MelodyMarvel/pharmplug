@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:pharmplug/home/welcome_screen.dart';
 import 'package:pharmplug/onboarding/lab_test_frame.dart';
 import 'package:pharmplug/onboarding/splash.dart';
 import 'package:pharmplug/onboarding/onboarding_screen2.dart';
@@ -17,10 +18,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-     
-      home: const UserScreen(),
+      debugShowCheckedModeBanner: false,     
+      home:  HomeScreen(),
     );
   }
 }
