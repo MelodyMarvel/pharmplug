@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:pharmplug/home/home.dart';
+import 'package:pharmplug/home/referral.dart';
 import 'package:pharmplug/onboarding/lab_test_frame.dart';
 import 'package:pharmplug/onboarding/splash.dart';
 import 'package:pharmplug/onboarding/onboarding_screen2.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,     
-      home:  HomeScreen(),
+      home:  ReferralPage(),
     );
   }
 }
