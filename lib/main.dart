@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:pharmplug/home/feedback.dart';
 import 'package:pharmplug/home/home.dart';
 import 'package:pharmplug/home/referral.dart';
 import 'package:pharmplug/onboarding/lab_test_frame.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,     
-      home:  ReferralPage(),
+      home:  FeedBack(),
     );
   }
 }
