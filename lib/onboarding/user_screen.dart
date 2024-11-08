@@ -13,10 +13,10 @@ class _UserScreenState extends State<UserScreen> {
   void _showPopUpBox() {
     showDialog(
       context: context,
-      barrierDismissible: true, // Allows clicking outside to dismiss the dialog
+      barrierDismissible: true,
       builder: (BuildContext context) {
         return Dialog(
-          backgroundColor: Colors.transparent, // Makes the backdrop semi-transparent
+          backgroundColor: Colors.transparent,
           child: _popUpBox(),
         );
       },
@@ -111,7 +111,8 @@ class _UserScreenState extends State<UserScreen> {
   Widget _confirmButton() {
     return Center(
       child: GestureDetector(
-        onTap: () {_showPopUpBox();
+        onTap: () {
+          _showPopUpBox();
         },
         child: Container(
           height: 60,
@@ -167,9 +168,7 @@ class _UserScreenState extends State<UserScreen> {
                 TextSpan(
                   text: "our service policy.",
                   style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      color:
-                          Color(0xFF8CD50A)), // Customize style here if needed
+                      fontWeight: FontWeight.w700, color: Color(0xFF8CD50A)),
                 ),
               ],
             ),
@@ -179,7 +178,7 @@ class _UserScreenState extends State<UserScreen> {
     );
   }
 
-  Widget _popUpBox(){
+  Widget _popUpBox() {
     return Container(
       height: 180,
       width: 220,
@@ -193,22 +192,29 @@ class _UserScreenState extends State<UserScreen> {
           Container(
             height: 20,
             width: 20,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),
-            color: Color(0xFF8CD50A)),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                color: Color(0xFF8CD50A)),
           ),
-          SizedBox(width: 20,),
+          SizedBox(
+            width: 20,
+          ),
           Container(
             height: 24,
             width: 24,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),
-            color: Color(0xFF8CD50A)),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                color: Color(0xFF8CD50A)),
           ),
-          SizedBox(width: 20,),
+          SizedBox(
+            width: 20,
+          ),
           Container(
-            height:28,
+            height: 28,
             width: 28,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),
-            color: Color(0xFF8CD50A)),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                color: Color(0xFF8CD50A)),
           )
         ],
       ),
