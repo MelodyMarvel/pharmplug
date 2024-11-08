@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:pharmplug/home/feedBack.dart';
 import 'package:pharmplug/home/home.dart';
 import 'package:pharmplug/onboarding/lab_test_frame.dart';
 import 'package:pharmplug/onboarding/splash.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,     
-      home:  HomeScreen(),
+      home:  FeedBack(),
     );
   }
 }
